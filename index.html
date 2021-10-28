@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversao</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Conversor de medidas</h1>
+    <p>Aqui esta a lista de medidas para a conversão que voce pode escolher </p>
+    <nav>
+        <ul class="list">
+            <li id="celsius">Celsius para Fahrenheit</li>
+            <li id="fahrenheit">Fahrenheit para Celsius</li>
+            <li id="real">Real para dólar</li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <p id="selct"></p>
+        <label for="val" id="label"></label>
+        <input type="number" name="val" id="valConv" disabled>
+        <input type="number" name="val" id="cot" style="display: none;">
+        <button id="calc" disabled>Calcular</button>
+        <div id="res"></div>
+    </div>
+   
+
+    <script defer src="script.js"></script>
+</body>
+</html>
