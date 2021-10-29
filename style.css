@@ -20,6 +20,13 @@ p {
     text-shadow: 2px 3px 7px #5f5f5f6b;
 }
 
+/* select, option {
+    padding: 3px;
+    width: 500px;
+    display: flex;
+    margin: 30px auto;
+} */
+
 nav {
     background-image: linear-gradient(90deg, #647BE8, #C068F2);
     padding: 10px;
@@ -36,7 +43,7 @@ li {
     transition-duration: .4s;
 }
 
-li:hover {
+ li:hover {
     border: 2px solid rgb(228, 228, 228);
     box-sizing: border-box;
     padding: 3px;

@@ -1,11 +1,12 @@
 let res = document.querySelector(`div#res`)
-let celsius = document.querySelector(`li#celsius`)
-let fahrenheit = document.querySelector(`li#fahrenheit`)
-let real = document.querySelector(`li#real`)
+let celsius = document.querySelector(`#celsius`)
+let fahrenheit = document.querySelector(`#fahrenheit`)
+let real = document.querySelector(`#real`)
 let valConv = document.querySelector(`input#valConv`)
 let calc = document.querySelector(`button#calc`)
 let label = document.querySelector(`label#label`)
 let cot = document.querySelector(`input#cot`)
+let select = document.querySelector(`#select`)
 
 celsius.addEventListener(`click`, calcCelsius)
 fahrenheit.addEventListener(`click`, calcFahren)
@@ -15,19 +16,17 @@ function calcCelsius(){
     valConv.value = ``
     res.textContent = ``
     cot.style = `display: none;`
-    valConv.disabled = false
+    valConv.disabled = false 
     calc.disabled = false
     label.textContent = `Digite o valor em Celsius`
     calc.addEventListener(`click`, calcular)
     function calcular() {
         if (valConv.value == ``) {
             res.innerHTML = `ERROR! Digite um valor válido.`
-
         }else {
             let result = ((9 * Number(valConv.value) + 160) / 5)
             res.innerHTML = `O resultado em Fahrenheit é: ${result.toFixed(2)} °F`
         }
-       
     }
 }
 
