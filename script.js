@@ -12,7 +12,7 @@ fahrenheit.addEventListener(`click`, calcFahren)
 real.addEventListener(`click`, calcReal)
 
 function calcCelsius(){
-    // valConv = 
+    valConv.value = ``
     res.textContent = ``
     cot.style = `display: none;`
     // let paragraph = document.createElement(`p`)
@@ -29,6 +29,7 @@ function calcCelsius(){
 }
 
 function calcFahren() {
+    valConv.value = ``
     res.textContent = ``
     cot.style = `display: none;`
     // let paragraph = document.createElement(`p`)
@@ -45,6 +46,7 @@ function calcFahren() {
 }
 
 function calcReal() {
+    valConv.value = ``
     res.textContent = ``
     // let paragraph = document.createElement(`p`)
     // res.appendChild(paragraph)
@@ -58,6 +60,6 @@ function calcReal() {
     // let result = Number(valConv.value) / Number(cot.value)
     function calcular() {
         let result = Number(valConv.value) / Number(cot.value)
-        res.innerHTML = `<O valor em Dólar é: U$ ${result.toFixed(2)}`
+        res.innerHTML = `O valor em Dólar é: U$ ${result.toFixed(2)}`
     }
 }
