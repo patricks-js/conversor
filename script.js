@@ -15,16 +15,19 @@ function calcCelsius(){
     valConv.value = ``
     res.textContent = ``
     cot.style = `display: none;`
-    // let paragraph = document.createElement(`p`)
-    // res.appendChild(paragraph)
-    // paragraph.innerHTML = `Celsius para Fahrenheit`
     valConv.disabled = false
-    label.textContent = `Digite o valor em Celsius`
     calc.disabled = false
+    label.textContent = `Digite o valor em Celsius`
     calc.addEventListener(`click`, calcular)
     function calcular() {
-        let result = ((9 * Number(valConv.value) + 160) / 5)
-        res.innerHTML = `O resultado em Fahrenheit é: ${result.toFixed(2)} °F`
+        if (valConv.value == ``) {
+            res.innerHTML = `ERROR! Digite um valor válido.`
+
+        }else {
+            let result = ((9 * Number(valConv.value) + 160) / 5)
+            res.innerHTML = `O resultado em Fahrenheit é: ${result.toFixed(2)} °F`
+        }
+       
     }
 }
 
@@ -32,25 +35,25 @@ function calcFahren() {
     valConv.value = ``
     res.textContent = ``
     cot.style = `display: none;`
-    // let paragraph = document.createElement(`p`)
-    // res.appendChild(paragraph)
-    // paragraph.innerHTML = `Fahrenheit para Celsius`
     valConv.disabled = false
     label.textContent = `Digite o valor em Fahrenheit`
     calc.disabled = false
     calc.addEventListener(`click`, calcular)
     function calcular() {
-        let result = (((Number(valConv.value) - 32) * 5) / 9)
-        res.innerHTML = `O resultado em Celsius é: ${result.toFixed(2)} °C`
+        if (valConv.value == ``) {
+            res.innerHTML = `ERROR! Digite um valor válido.`
+            
+        } else {
+            let result = (((Number(valConv.value) - 32) * 5) / 9)
+            res.innerHTML = `O resultado em Celsius é: ${result.toFixed(2)} °C`
+        }
     }
 }
 
 function calcReal() {
+    cot.value = ``
     valConv.value = ``
     res.textContent = ``
-    // let paragraph = document.createElement(`p`)
-    // res.appendChild(paragraph)
-    // paragraph.textContent = `Real para dólar`
     cot.style = `display: block;`
 
     valConv.disabled = false
@@ -59,7 +62,13 @@ function calcReal() {
     calc.addEventListener(`click`, calcular)
     // let result = Number(valConv.value) / Number(cot.value)
     function calcular() {
-        let result = Number(valConv.value) / Number(cot.value)
-        res.innerHTML = `O valor em Dólar é: U$ ${result.toFixed(2)}`
+        if (valConv.value == `` || cot.value == ``) {
+            res.innerHTML = `ERROR! Digite um valor válido.`
+        } else if (valConv.value < 0 || cot.value < 0){
+            res.innerHTML = `ERROR! Digite um valor válido.`
+        } else {
+            let result = Number(valConv.value) / Number(cot.value)
+            res.innerHTML = `O valor em Dólar é: U$ ${result.toFixed(2)}`
+        }
     }
 }
